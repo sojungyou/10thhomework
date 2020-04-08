@@ -18,10 +18,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
 Route::get('profile/create', 'Admin\ProfilesController@add')->middleware('auth');
-Route::post('profile/create', 'Admin\ProfileController@create');
-Route::post('profile/edit', 'Admin\ProfileController@update');
-Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth'); 
-Route::get('profile', 'Admin\ProfileControllers@index')->middleware('auth');
+Route::post('profile/create', 'Admin\ProfilesController@create');
+Route::post('profile/edit', 'Admin\ProfilesController@update');
+Route::get('profile/edit', 'Admin\ProfilesController@edit')->middleware('auth'); 
+Route::get('profile', 'Admin\ProfilesControllers@index')->middleware('auth');
 
 
 });

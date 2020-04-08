@@ -15,9 +15,9 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required'
     );
-    public function records ()
+    public function records()
     {
-        return $this->hasmany('App\record');
+        return $this->hasmany('App\Record');
     }
 
 }
